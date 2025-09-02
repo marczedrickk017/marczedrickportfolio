@@ -467,4 +467,8 @@ footer .btn-download {
 footer .btn-download:hover {
   opacity: 0.85;
 }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
 
