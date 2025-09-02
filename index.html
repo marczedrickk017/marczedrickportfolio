@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Marc</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Marc Zedrick</div>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Marc Profile">
+    </div>
+    <div class="hero-text">
+      <h1>Hi, It's <span>Marc Zedrick</span></h1>
+      <h2>I'm an <span>IT Graduate</span></h2>
+      <p>I’m passionate about building creative, user-friendly applications and solving technical problems with adaptability and innovation.</p>
+      
+      <div class="socials">
+        <a href="mailto:mzed017@gmail.com" target="_blank">
+          <img src="gmail.png" alt="Gmail">
+        </a>
+        <a href="https://www.facebook.com/marczedrickk" target="_blank">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/mrczdrckk/" target="_blank">
+          <img src="instagram.png" alt="Instagram">
+        </a>
+      </div>
+      
+      <!-- Hire Me -->
+      <a href="mailto:mzed017@gmail.com?subject=Job%20Opportunity&body=Hello%20Marc," class="btn">Hire me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p>
+        I’m <span>Marc Zedrick Nervez</span>, a passionate IT graduate with strong skills in web development, 
+        troubleshooting, and adaptability. I enjoy building creative and user-friendly applications, 
+        while continuously improving my skills in technology and problem-solving.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+<section class="skills" id="skills">
+  <div class="skills-container">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Web Development</div>
+      <div class="skill-card">Troubleshooting</div>
+      <div class="skill-card">Adaptability</div>
+      <div class="skill-card">Multitasking</div>
+      <div class="skill-card">Collaboration</div>
+      <div class="skill-card">Technical Support</div>
+      <div class="skill-card">Encoding</div>
+      <div class="skill-card">Scheduling</div>
+      <div class="skill-card">Customer Support</div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Education -->
+<section class="education" id="education">
+  <div class="education-container">
+    <h2>Education</h2>
+    <div class="timeline">
+
+      <!-- UNC -->
+      <div class="edu-card">
+        <img src="UNC.jpg" alt="UNC Logo">
+        <div class="edu-info">
+          <h3>University of Nueva Caceres</h3>
+          <p><strong>Bachelor of Science in Information Technology</strong></p>
+          <span>2021 – 2025</span>
+        </div>
+      </div>
+
+      <!-- SCT -->
+      <div class="edu-card">
+        <img src="SCT.png" alt="SCT Logo">
+        <div class="edu-info">
+          <h3>Siena College Tigaon</h3>
+          <p><strong>Senior High School – STEM Strand</strong></p>
+          <span>2019 – 2021</span>
+        </div>
+      </div>
+
+      <!-- SCT -->
+      <div class="edu-card">
+        <img src="SCT.png" alt="SCT Logo">
+        <div class="edu-info">
+          <h3>Siena College Tigaon</h3>
+          <p><strong>Junior High School</strong></p>
+          <span>2015 – 2019</span>
+        </div>
+      </div>
+
+      <!-- TCPS -->
+      <div class="edu-card">
+        <img src="TCPS.jpg" alt="TCPS Logo">
+        <div class="edu-info">
+          <h3>Tigaon Central Pilot School</h3>
+          <p><strong>Elementary</strong></p>
+          <span>2009 – 2015</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+ <footer>
+  <div class="footer-content">
+    <a href="Nervez_CV.pdf" download class="btn btn-download">Download CV</a>
+    <p>© 2025 Marc Zedrick Nervez | Portfolio</p>
+  </div>
+</footer>
+
+
+  <!-- Scroll Effect Script -->
+  <script>
+    window.addEventListener("scroll", function() {
+      const navbar = document.querySelector("nav");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
