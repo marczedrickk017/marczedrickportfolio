@@ -1,0 +1,470 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 80px;
+  background: #0a0a0a;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+nav.scrolled {
+  background: #111;
+  padding: 20px 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+nav .logo {
+  font-size: 34px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e57373;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Hero */
+/* ===== Hero Section (Home) ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 10%;
+  gap: 60px;
+  background: #0a0a0a; /* Dark background like About Me */
+  color: #fff;
+}
+
+.hero img {
+  width: 280px;
+  border-radius: 50%;
+  border: 5px solid #ff4d6d; /* Pink border */
+  box-shadow: 0 0 25px rgba(255, 77, 109, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  margin: 12px 0;
+  color: #ff4d6d;
+  font-weight: 600;
+}
+
+.hero-text p {
+  max-width: 500px;
+  margin: 20px 0;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Social Icons (match About Me buttons) */
+.socials {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff4d6d;
+  transition: 0.3s ease;
+  background: #111;
+}
+
+.socials a img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.socials a:hover {
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.7);
+}
+
+/* Hero Button */
+.hero .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 35px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  opacity: 0.85;
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.7);
+}
+
+
+/* Section Title */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #e57373;
+}
+/* ===== Global Section Style ===== */
+section {
+  padding: 100px 10%;
+  background: #fff; /* Same as Home */
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #007bff; /* Blue like Home */
+}
+
+/* ===== Global Section Dark Theme ===== */
+section {
+  padding: 100px 10%;
+  background: #0a0a0a; /* Dark background like Home */
+  color: #fff;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== About Section ===== */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #ddd;
+  margin-bottom: 35px;
+}
+
+.about span {
+  color: #ff4d6d; /* Pink highlight */
+  font-weight: 700;
+}
+
+.about .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.about .btn:hover {
+  opacity: 0.85;
+}
+
+
+/* Skills Section */
+.skills {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color:linear-gradient(90deg, #ff4d6d, #007bff);
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  background: #1a1a1a;
+  border: linear-gradient(90deg, #ff4d6d, #007bff);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 78, 198, 0.2);
+}
+
+.skill-card:hover {
+  background:linear-gradient(90deg, #ff4d6d, #007bff);
+  color: #0a0a0a;
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(255, 78, 198, 0.6);
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(255, 77, 109, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  border: 2px solid #ff4d6d;
+  box-shadow: 0 12px 35px rgba(255, 77, 109, 0.4);
+}
+
+.skill-card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #ff4d6d;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover i {
+  color: #007bff;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+
+
+/* Education Section */
+.education {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ded7dc;
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.edu-card {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border: 2px solid #3a2233;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(73, 12, 54, 0.2);
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  color: #0a0a0a;
+  transform: translateY(-8px);
+  box-shadow: linear-gradient(90deg, #ff4d6d, #007bff);
+}
+
+.edu-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.edu-info {
+  text-align: left;
+}
+
+.edu-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: linear-gradient(90deg, #ff4d6d, #007bff);
+}
+
+.edu-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.edu-info span {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Section Divider */
+section {
+  padding: 100px 10%;
+  background: #0a0a0a;
+  color: #fff;
+  position: relative; /* Needed for absolute positioning */
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* Stick to the bottom */
+  transform: translateX(-50%);
+  width: 80%;   /* length of line (make 100% for full width) */
+  height: 3px;  /* thickness */
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  border-radius: 5px;
+}
+
+/* Remove divider on last section (Contact) */
+section:last-of-type::after {
+  display: none;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #0a0a0a;
+  color: #ccc;
+  font-size: 0.95rem;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, #ff4d6d, #007bff) 1;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+footer p {
+  margin: 0;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+footer .btn-download {
+  display: inline-block;
+  padding: 23px 38px;
+  border-radius: 30px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff4d6d, #007bff);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+footer .btn-download:hover {
+  opacity: 0.85;
+}
+
